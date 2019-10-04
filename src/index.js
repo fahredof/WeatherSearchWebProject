@@ -7,7 +7,9 @@ function processInp() {
     getWeatherParams(cityName);
 }
 
-document.getElementById("submit").onclick = processInp;
+document.getElementById("search-form").addEventListener('submit', function () {
+    processInp()
+});
 
 function getWeatherParams(cityName) {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?`, {
