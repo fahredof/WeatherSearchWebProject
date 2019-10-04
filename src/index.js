@@ -17,11 +17,22 @@ function getWeatherParams(cityName) {
         }
     })
         .then(function(resultParam) {
-            let weather = resultParam.data
+            let weather = resultParam.data;
             fillWeather(weather);
+        })
+        .catch(function(err) {
+            console.log(err.message);
+            fillErr(err.message);
         })
 }
 
+function fillErr(message) {
+    document.getElementById("item0").src="";
+    document.getElementById("item1").innerText = "";
+    document.getElementById("item2").innerText = "";
+    document.getElementById("item3").innerText = message;
+    document.getElementById("item4").innerText = "";
+}
 function fillWeather(weather) {
     document.getElementById("item0").src="http://openweathermap.org/img/wn/"+weather.weather[0].icon+"@2x.png";
     document.getElementById("item1").innerText = weather.name+", "+weather.sys.country;
