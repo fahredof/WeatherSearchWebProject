@@ -3,12 +3,14 @@ import './style.scss';
 let apiKey = "f77919380546d1f6ef8015d53089ba0e";
 
 function processInp() {
-  let cityName = document.getElementById("exampleInputCity").value;
-  getWeatherParams(cityName);
+    let cityName = document.getElementById("exampleInputCity").value;
+    getWeatherParams(cityName);
 }
 
-document.getElementById("submit").onclick = processInp;
-//getWeatherParams('Ufa')
+document.getElementById("search-form").addEventListener('submit', function () {
+    processInp()
+});
+
 function getWeatherParams(cityName) {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?`, {
         params: {
@@ -18,7 +20,6 @@ function getWeatherParams(cityName) {
     })
         .then(function(resultParam) {
             let weather = resultParam.data;
-            console.log(weather);
             fillWeather(weather);
         })
         .catch(function(err) {
