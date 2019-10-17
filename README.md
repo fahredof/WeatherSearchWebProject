@@ -1,2 +1,4 @@
 # WeatherSearchWebProject
-## Project
+
+* npm i
+* npm run dev
