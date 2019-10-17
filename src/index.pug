@@ -6,23 +6,17 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         // Bootstrap CSS
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
-        link(rel="stylesheet" href="style.scss")
         title Weather
     body
         .container
             .row
                 .col
                 .col-lg-8.weather
-                    form(action="#")
+                    form#Form
                         .form-group
                             input#exampleInputCity.form-control(aria-describedby="cityHelp" placeholder="Введите город")
                         button#submit.btn.btn-primary(type="submit") Подтвердить
-                    .listOfWeather
-                        img#item0
-                        #item1
-                        #item2
-                        #item3
-                        #item4
+                    .listOfWeather#listOfWeather
                 .col
 
         script(type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js")
