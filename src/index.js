@@ -2,7 +2,7 @@ import './style.scss';
 const tempFunction = require('./template.pug');
 const err = "Введите город";
 const apiKey = "f77919380546d1f6ef8015d53089ba0e";
-const audio = new Audio('src/music/moskva.m4a');
+const audio = new Audio('music/moskva.m4a');
 
 function playAudio() {
   audio.play();
@@ -12,11 +12,11 @@ function Zabaitit(city) {
   if (city === "Moscow") {
     playAudio();
     let styleBack = document.getElementById("mainId");
-    styleBack.style.backgroundImage = "url(src/image/newvideo.gif)";
+    styleBack.style.backgroundImage = "url(image/newvideo.gif)";
   }
   else {
     let styleBack = document.getElementById("mainId");
-    styleBack.style.backgroundImage = "url(src/image/back.jpg)";
+    styleBack.style.backgroundImage = "url(image/back.jpg)";
     audio.pause();
   }
 }
