@@ -5,6 +5,7 @@ let apiKey = "f77919380546d1f6ef8015d53089ba0e";
 
 function processInp(event) {
   getWeatherParams(event.target[0].value);
+  event.preventDefault();
 }
 
 document.getElementById("Form").addEventListener("submit", processInp);
