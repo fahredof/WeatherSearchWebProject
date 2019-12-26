@@ -1,13 +1,1 @@
-body {
-  background-image: url(9003cbcd69c1f4191030c16b4638b2fd.jpg);
-  color: white; }
-
-.row {
-  margin-top: 10%; }
-
-.weather {
-  background: rgba(0, 0, 0, 0.2);
-  height: 450px; }
-
-.form-control {
-  margin-top: 3%; }
+body{background-image:url(9003cbcd69c1f4191030c16b4638b2fd.jpg);color:white}.row{margin-top:10%}.weather{background:rgba(0,0,0,0.2);height:450px}.form-control{margin-top:3%}
